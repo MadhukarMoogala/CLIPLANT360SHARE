@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.Net.Sdk">  
+  <PropertyGroup>
+    <!-- Set AutoCAD Install Directory Path-->
+    <AcadInstallDir>D:\ACAD\venn\AutoCAD 2025</AcadInstallDir>
+    <PlantInstallDir>$(AcadInstallDir)\PLNT3D</PlantInstallDir>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <BaseOutputPath>$(MSBuildProjectDirectory)</BaseOutputPath>
+    <AssemblyName>P360Share</AssemblyName>
+    <RootNamespace>P360Share</RootNamespace>
+    <OutputType>Library</OutputType>    
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblySearchPaths>$(AcadInstallDir);$(PlantInstallDir);$(AssemblySearchPaths)</AssemblySearchPaths>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>  
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AcCoreMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcDbMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PnP3dProjectPartsMgd">
+        <SpecificVersion>False</SpecificVersion>
+        <Private>False</Private>
+    </Reference>
+    <Reference Include="PnPCommonMgd">
+        <SpecificVersion>False</SpecificVersion>
+        <Private>False</Private>
+    </Reference>
+    <Reference Include="PnPProjectManagerMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PnPProjectManagerUI">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PnPDataObjects">
+        <SpecificVersion>False</SpecificVersion>
+        <Private>False</Private>
+    </Reference>
+      <Reference Include="PnPDataLinks">
+          <SpecificVersion>False</SpecificVersion>
+          <Private>False</Private>
+      </Reference>
+  </ItemGroup>  
+</Project>
