@@ -63,6 +63,14 @@ P360Share.Program.UploadProject(
     new CancellationToken()
 );
 ```
+## Demo
+
+
+https://github.com/user-attachments/assets/54b2c13a-9e08-4437-bac5-fa00e80ad388
+
+## Known Limitations
+- The CLI command works best when a Plant 3D project is opened in AutoCAD Plant 3D. Loading a project.xml file directly using the API, e.g., PlantProject prj = PlantProject.LoadProject(@"D:\abc\project.xml", true, null, null);, does not synchronize effectively with the collaboration cache.
+- Ensure that the ACC Hub contains at least one project; otherwise, you may encounter a null ProjectFolderUrn exception.
 
 ## License
 
